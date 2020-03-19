@@ -1,5 +1,5 @@
 /*ckwg +29
- * Copyright 2017 by Kitware, Inc.
+ * Copyright 2020 by Kitware, Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,26 +28,30 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "eigen_class.cxx"
+#include <vital/types/descriptor_request.h>
 
 #include <pybind11/pybind11.h>
-#include <pybind11/eigen.h>
+#include <pybind11/stl.h>
 
-namespace py = pybind11;
-using namespace kwiver::vital::python;
+#include <memory>
 
-PYBIND11_MODULE(eigen, m)
+namespace py=pybind11;
+namespace kv=kwiver::vital;
+
+PYBIND11_MODULE(descriptor_request, m)
 {
-
-  py::class_< EigenArray, std::shared_ptr<EigenArray> >(m, "EigenArray")
-  .def(py::init< int, int, bool, bool, char>(),
-         py::arg("rows")=2, py::arg("cols")=1,
-         py::arg("dynamic_rows")=false, py::arg("dynamic_cols")=false,
-         py::arg("type")='d')
-  .def("get_matrix", &EigenArray::getMatrix, "Access the C++ matrix by reference", py::return_value_policy::reference_internal)
-  .def("copy_matrix", &EigenArray::getMatrix, "Creates a python copy of the matrix")
-  .def_static("from_array", &EigenArray::fromArray,
-         py::arg("data"), py::arg("type")='d')
+  py::class_<kwiver::vital::descriptor_request,
+    std::shared_ptr<kwiver::vital::descriptor_request>>(m, "DescriptorRequest")
+  .def(py::init<>())
+  // Expose the member variables with getters and setters
+  .def_property("id", &kv::descriptor_request::id, &kv::descriptor_request::set_id)
+  .def_property("spatial_regions", &kv::descriptor_request::spatial_regions, &kv::descriptor_request::set_spatial_regions)
+  .def_property("image_data", &kv::descriptor_request::image_data, &kv::descriptor_request::set_image_data)
+  .def_property("data_location", &kv::descriptor_request::data_location, &kv::descriptor_request::set_data_location)
+  // There aren't separate setters for each of the temporal bounds
+  // member variables, so we'll expose the corresponding functions like normal
+  .def("temporal_lower_bound", &kv::descriptor_request::temporal_lower_bound)
+  .def("temporal_upper_bound", &kv::descriptor_request::temporal_upper_bound)
+  .def("set_temporal_bounds", &kv::descriptor_request::set_temporal_bounds)
   ;
-
 }
