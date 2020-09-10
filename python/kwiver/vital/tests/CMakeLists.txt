@@ -47,6 +47,7 @@ set(__testable_modnames
   test_image_io
   test_iqr_feedback
   test_landmark
+  test_landmark_map
   test_local_cartesian
   test_local_geo_cs
   test_match_set
