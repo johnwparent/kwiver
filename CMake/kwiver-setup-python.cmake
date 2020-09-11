@@ -226,12 +226,12 @@ mark_as_advanced(PYTHON_ABIFLAGS)
 # sets the python dependencies defined in python/requirements.txt
 # to be a custom command of the python libraries target
 # the user flag is required when not executing inside a venv, we always pass it
-set(PIP_COMMAND "${PYTHON_EXECUTABLE}" 
-                "-m" 
-                "pip" 
-                "install" 
-                "--user" 
-                "-r" 
+set(PIP_COMMAND "python"
+                "-m"
+                "pip"
+                "install"
+                "--user"
+                "-r"
                 "${KWIVER_SOURCE_DIR}/python/requirements.txt")
 
 execute_process (
@@ -253,12 +253,12 @@ endif()
 # Pybind11 Bindings Test Runner - nosetests
 # find local install of nosetests executable, search for version associated with kwiver
 # first, default to v 3.4, the most recent version provided by pip install
-# alternatively users can install the version of nose specific 
+# alternatively users can install the version of nose specific
 # to the version of python they're running with kwiver
 #
 #
 if (KWIVER_ENABLE_TESTS)
-  find_program (NOSE_RUNNER NAMES 
+  find_program (NOSE_RUNNER NAMES
   "nosetests-${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}"
   "nosetests${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}"
   "nosetests-${PYTHON_VERSION_MAJOR}"
@@ -272,7 +272,7 @@ if (KWIVER_ENABLE_TESTS)
     message (STATUS "Found nosetests. Python tests will be run if testing is enabled. ")
 
   else()
-    message (STATUS "nosetests not found, Python tests will not be run. 
+    message (STATUS "nosetests not found, Python tests will not be run.
                     (To run install nosetests compatible with Python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR})")
   endif()
 endif()
