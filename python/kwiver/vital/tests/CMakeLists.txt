@@ -83,7 +83,6 @@ set(__all_modnames
 
 
 set(mod_dst)
-
 foreach (modname IN LISTS __all_modnames)
   kwiver_add_python_module( ${CMAKE_CURRENT_SOURCE_DIR}/${modname}.py
     vital/tests
@@ -108,15 +107,17 @@ if (KWIVER_ENABLE_TESTS)
         "data/airplane.ply")
 
   include(kwiver-setup-tests-python)
-  
+
   foreach (file_name IN LISTS _test_data)
 
-    kwiver_python_add_test_data(${file_name} 
+    kwiver_python_add_test_data(${file_name}
                                 ${kwiver_test_working_path})
 
   endforeach()
 
-  
+
+
+  include(kwiver-setup-tests-python)
   if (NOSE_RUNNER)
 
     kwiver_add_nosetests(py_vital_types)
