@@ -238,12 +238,12 @@ execute_process (
                   COMMAND ${PIP_COMMAND}
                   RESULT_VARIABLE pip_install_result
                   ERROR_VARIABLE pip_install_error
+                  OUTPUT_QUIET
                 )
 
 if (pip_install_result AND NOT pip_install_result EQUAL 0)
-  message (WARNING "pip install failed, python may have unmet dependencies\n
-                    Error: ${pip_install_error}\n
-                    Python Executable: ${PYTHON_EXECUTABLE}")
+  message (WARNING "pip install failed, python may have unmet dependencies
+                    Error: ${pip_install_error}\n")
 else()
   message (STATUS "pip install successfull")
 endif()
