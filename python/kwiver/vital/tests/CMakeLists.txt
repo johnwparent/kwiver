@@ -96,7 +96,7 @@ add_subdirectory(alg)
 # here all we should be doing is setting a single nosetest with the path
 # to the above generated module
 
-if (KWIVER_ENABLE_TESTS)
+if (KWIVER_ENABLE_TESTS AND NOSE_RUNNER)
 
   set(NOSE_RUNNER)
   set(modpath vital/tests/)
@@ -118,10 +118,8 @@ if (KWIVER_ENABLE_TESTS)
 
 
   include(kwiver-setup-tests-python)
-  if (NOSE_RUNNER)
-
-    kwiver_add_nosetests(py_vital_types)
-
-  endif()
+    foreach (test IN LISTS __testable_modnames)
+      kwiver_add_nosetests(${test} vital-type-)
+    endforeach()
 
 endif()
