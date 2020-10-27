@@ -81,7 +81,7 @@ set(__all_modnames
   ${__testable_modnames}
   )
 
-
+# Add files to the vital.tests python module
 foreach (modname IN LISTS __all_modnames)
   kwiver_add_python_module( ${CMAKE_CURRENT_SOURCE_DIR}/${modname}.py
     vital/tests
@@ -95,6 +95,7 @@ add_subdirectory(alg)
 # here all we should be doing is setting a single nosetest with the path
 # to the above generated module
 
+# Add python vital.tests to CTest if python test runner is available
 if (KWIVER_ENABLE_TESTS AND NOSE_RUNNER)
 
   set(NOSE_RUNNER)
