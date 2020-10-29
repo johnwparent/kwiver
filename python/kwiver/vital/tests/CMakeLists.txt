@@ -90,18 +90,16 @@ endforeach()
 
 add_subdirectory(alg)
 # dont select all tests, just configure a single add test with the name vital_types
-# and have nose run, exporting the output to an Xunit xml via commandline args to ctest --
+# and have PYTEST run, exporting the output to an Xunit xml via commandline args to ctest --
 # could probably have set that in the set kwiver_test_runner command or add test...
-# here all we should be doing is setting a single nosetest with the path
+# here all we should be doing is setting a single PYTEST with the path
 # to the above generated module
 
 # Add python vital.tests to CTest if python test runner is available
-if (KWIVER_ENABLE_TESTS AND NOSE_RUNNER)
+if (KWIVER_ENABLE_TESTS AND PYTEST_RUNNER)
 
-  set(NOSE_RUNNER)
-  set(modpath vital/tests/)
-  set(kwiver_test_working_path)
-  set(kwiver_test_output_path)
+
+  include(kwiver-setup-tests-python)
 
   set(_test_data
         "data/airplane.ply")
@@ -117,9 +115,8 @@ if (KWIVER_ENABLE_TESTS AND NOSE_RUNNER)
 
 
 
-  include(kwiver-setup-tests-python)
     foreach (test IN LISTS __testable_modnames)
-      kwiver_add_nosetests(${test} vital-type-)
+      kwiver_add_pytests(${test} python)
     endforeach()
 
 endif()

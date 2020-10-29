@@ -130,20 +130,20 @@ function (kwiver_discover_python_tests group file)
 endfunction ()
 
 ###
-# Adds a python module testing suite run by nosetests
+# Adds a python module testing suite run by PYTEST
 #
-function (kwiver_add_nosetests name targ)
+function (kwiver_add_pytest name targ)
   if (WIN32)
     add_test(
       NAME    test-python-${name}
-      COMMAND cmd /C "${NOSE_COMMAND} ${kwiver_test_runner}${name}.py --with-xunit\
-                                --xunit-file=nose_results.xml"
+      COMMAND cmd /C "${PYTEST_COMMAND} ${kwiver_test_runner}${name}.py --with-xunit\
+                                --xunit-file=PYTEST_results.xml"
               ${ARGN})
   else()
     add_test(
       NAME    test-python-${name}
-      COMMAND bash -c "${NOSE_COMMAND} ${kwiver_test_runner}${name}.py --with-xunit\
-                                --xunit-file=nose_results.xml"
+      COMMAND bash -c "${PYTEST_COMMAND} ${kwiver_test_runner}${name}.py --with-xunit\
+                                --xunit-file=PYTEST_results.xml"
               ${ARGN})
   endif()
 
@@ -178,7 +178,7 @@ endfunction()
 
 
 ###
-# Add test data to nosetest directory
+# Add test data to PYTESTtest directory
 #
 function (kwiver_python_add_test_data file_name file_dst)
 

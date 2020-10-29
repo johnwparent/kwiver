@@ -204,23 +204,6 @@ mark_as_advanced(PYTHON_ABIFLAGS)
   find_package(pybind11)
 
 ###
-# Pybind11 Bindings Test Runner - nosetests
-# find local install of nosetests executable, search for version associated with kwiver
-# first, default to v 3.4, the most recent version provided by pip install
-# alternatively users can install the version of nose specific
-# to the version of python they're running with kwiver
-#
-#
-  find_program (NOSE_RUNNER NAMES
-  "nosetests-${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}"
-  "nosetests${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}"
-  "nosetests-${PYTHON_VERSION_MAJOR}"
-  "nosetests${PYTHON_VERSION_MAJOR}"
-  "nosetests-3.4"
-  "nosetests3.4"
-  "nosetests")
-
-###
 # Python Dependencies
 #
 # sets the python dependencies defined in python/requirements.txt
@@ -316,27 +299,21 @@ if (KWIVER_ENABLE_TESTS)
   #
   #
   if (VENV_CREATED)
-    set(NOSE_RUNNER "${Python3_EXECUTABLE} -m nose")
-    set(NOSE_LOC "${VENV_DIR}/nose")
+    set(PYTEST_RUNNER "${Python3_EXECUTABLE} -m pytest")
+    set(PYTEST_LOC "${VENV_DIR}/pytest")
   else()
-    find_program(NOSE_RUNNER NAMES
-    "nosetests-${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}"
-    "nosetests${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}"
-    "nosetests-${PYTHON_VERSION_MAJOR}"
-    "nosetests${PYTHON_VERSION_MAJOR}"
-    "nosetests-3.4"
-    "nosetests3.4"
-    "nosetests")
-    set(NOSE_LOC NOSE_RUNNER)
+    find_program(PYTEST_RUNNER NAMES
+    "pytest")
+    set(PYTEST_LOC PYTEST_RUNNER)
   endif()
-  if (NOSE_RUNNER)
+  if (PYTEST_RUNNER)
 
-    message(STATUS "Found nosetests at ${NOSE_LOC}.\n"
-            "Python tests will be run if testing is enabled. noserunner: ${NOSE_RUNNER}")
+    message(STATUS "Found pytest at ${PYTEST_LOC}.\n"
+            "Python tests will be run if testing is enabled. pytest runner: ${PYTEST_RUNNER}")
 
   else()
-    message(STATUS "nosetests not found, Python tests will not be run.\
-           (To run install nosetests compatible with Python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR})")
+    message(STATUS "pytest not found, Python tests will not be run.\
+           (To run, install pytests compatible with Python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR})")
   endif()
 endif()
 

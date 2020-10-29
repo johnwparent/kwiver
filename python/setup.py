@@ -90,7 +90,6 @@ setup(
                           'torchvision',
                          ],
         tests_require=[
-                        'nose',
                         'mock',
                         'coverage',
                         'external_arrow',
