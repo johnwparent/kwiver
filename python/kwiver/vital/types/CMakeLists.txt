@@ -402,7 +402,7 @@ target_link_libraries(python-vital.types-homography_mod
 #          vital)
 
 autopybind11_add_module(iqr_feedback_mod
-                        WRAPPER_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/wrapper_inputs/iqr_wrapper.yml
+                        YAML_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/wrapper_inputs/iqr_wrapper.yml
                         CONFIG_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/configs/iqr_conf.yml
                         DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
                         LINK_LIBRARIES vital

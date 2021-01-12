@@ -15,6 +15,7 @@ files:
           vital:
             classes:
               metadata_map:
+              simple_metadata_map:
   vital/types/metadata_traits.h:
     namespaces:
       kwiver:
