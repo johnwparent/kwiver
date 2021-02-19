@@ -119,6 +119,7 @@ target_link_libraries(python-vital.types-camera_mod
 #   PUBLIC ${PYTHON_LIBRARIES}
 #          vital)
 
+file(GENERATE OUTPUT vital_opts CONTENT $<TARGET_PROPERTY:vital,INTERFACE_COMPILE_DEFINITIONS>)
 autopybind11_add_module(category_hierarchy_mod
                         YAML_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/wrapper_inputs/category_hierarchy_wrapper.yml
                         CONFIG_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/configs/category_hierarchy_conf.yml

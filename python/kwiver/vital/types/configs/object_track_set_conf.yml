@@ -1,1 +1,1 @@
-ignore_namespace_structure: True
+enforce_namespace_structure: False
