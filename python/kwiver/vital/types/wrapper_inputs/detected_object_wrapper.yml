@@ -13,3 +13,4 @@ files:
           vital:
             classes:
               detected_object_set:
+              #need to ignore iterator methods

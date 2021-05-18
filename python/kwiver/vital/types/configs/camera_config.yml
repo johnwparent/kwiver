@@ -1,1 +1,2 @@
 enforce_namespace_structure: False
+pass_eigen_by_ref: False
