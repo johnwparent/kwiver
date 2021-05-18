@@ -12,6 +12,8 @@
 
 #ifdef VITAL_LOAD_PYLIB_SYM
   #include <dlfcn.h>
+#else
+  #include <libloaderapi.h>
 #endif
 
 // Undefine macros that will double expand in case an definition has a value
@@ -101,8 +103,40 @@ bool load_python_library_from_env()
       LOG_DEBUG(logger, "Unable to pre-load python symbols because " <<
       "PYTHON_LIBRARY is undefined.");
     }
+  #else
+    LOG_DEBUG(logger, "Custom Python symbol checking");
+    const char *env_pylib = kwiversys::SystemTools::GetEnv( "PYTHON_LIBRARY" );
+
+    // cmake should provide this definition
+    #ifdef PYTHON_LIBRARY
+      const char *default_pylib = MACRO_STR_VALUE(PYTHON_LIBRARY);
     #else
-      LOG_DEBUG(logger, "Not checking for python symbols");
+      const char *default_pylib = NULL;
+    #endif
+
+    // First check if the PYTHON_LIBRARY environment variable is specified
+    const char * pylib = NULL;
+    if( env_pylib) pylib = env_pylib;
+    else pylib = default_pylib;
+    if (pylib)
+    {
+      // If the PYTHON_LIBRARY environment variable is not specified, use the
+      // CMAKE definition of PYTHON_LIBRARY instead.
+      LOG_DEBUG(logger, "Loading symbols from default PYTHON_LIBRARY=" << pylib);
+      void* handle = LoadLibraryExA( pylib, NULL, NULL);
+      if (!handle) {
+        LOG_ERROR(logger, "Cannot load library: " << dlerror());
+      }
+      else
+      {
+        python_library_found = true;
+      }
+    }
+    else
+    {
+      LOG_DEBUG(logger, "Unable to pre-load python symbols because " <<
+      "PYTHON_LIBRARY is undefined.");
+    }
   #endif
   return python_library_found;
 }
@@ -143,6 +177,25 @@ find_python_library()
   {
     LOG_WARN(logger, "Failed to use python interpretor to find python library:\n" << e.what());
     return std::string();
+  }
+}
+
+void
+load_python_syms(const std::string &python_path)
+{
+  auto logger = kwiver::vital::get_logger("vital.python_modules");
+  try
+  {
+    py::object const l = py::module::import("kwiver.vital.util.cxx_loaders");
+    py::object const lib_handle = l.attr("PyLoadLibrary")(python_path);
+    if (!lib_handle) {
+      LOG_ERROR(logger, "Cannot load library: " << dlerror());
+    }
+  }
+  catch (pybind11::error_already_set& e)
+  {
+    LOG_WARN(logger, "Failed to use python interpretor to find python library:\n" << e.what());
+    return;
   }
 }
 
