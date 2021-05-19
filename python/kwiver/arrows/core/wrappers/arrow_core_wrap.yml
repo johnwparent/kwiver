@@ -1,0 +1,461 @@
+files:
+  arrows/core/associate_detections_to_tracks_threshold.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              associate_detections_to_tracks_threshold: null
+  arrows/core/class_probablity_filter.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              class_probablity_filter: null
+  arrows/core/close_loops_appearance_indexed.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              close_loops_appearance_indexed: null
+  arrows/core/close_loops_bad_frames_only.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              close_loops_bad_frames_only: null
+  arrows/core/close_loops_exhaustive.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              close_loops_exhaustive: null
+  arrows/core/close_loops_keyframe.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              close_loops_keyframe: null
+  arrows/core/close_loops_multi_method.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              close_loops_multi_method: null
+  arrows/core/colorize.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              colorize: null
+  arrows/core/compute_association_matrix_from_features.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              compute_association_matrix_from_features: null
+  arrows/core/compute_ref_homography_core.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              compute_ref_homography_core: null
+  arrows/core/convert_image_bypass.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              convert_image_bypass: null
+  arrows/core/create_detection_grid.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              create_detection_grid: null
+  arrows/core/depth_utils.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              depth_utils: null
+  arrows/core/detect_features_filtered.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              detect_features_filtered: null
+  arrows/core/detected_object_set_input_csv.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              detected_object_set_input_csv: null
+  arrows/core/detected_object_set_input_kw18.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              detected_object_set_input_kw18: null
+  arrows/core/detected_object_set_input_simulator.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              detected_object_set_input_simulator: null
+  arrows/core/detected_object_set_output_csv.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              detected_object_set_output_csv: null
+  arrows/core/detected_object_set_output_kw18.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              detected_object_set_output_kw18: null
+  arrows/core/dynamic_config_none.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              dynamic_config_none: null
+  arrows/core/epipolar_geometry.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              epipolar_geometry: null
+  arrows/core/estimate_canonical_transform.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              estimate_canonical_transform: null
+  arrows/core/example_detector.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              example_detector: null
+  arrows/core/feature_descriptor_io.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              feature_descriptor_io: null
+  arrows/core/filter_features_magnitude.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              filter_features_magnitude: null
+  arrows/core/filter_features_nonmax.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              filter_features_nonmax: null
+  arrows/core/filter_features_scale.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              filter_features_scale: null
+  arrows/core/filter_tracks.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              filter_tracks: null
+  arrows/core/handle_descriptor_request_core.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              handle_descriptor_request_core: null
+  arrows/core/hierarchical_bundle_adjust.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              hierarchical_bundle_adjust: null
+  arrows/core/initialize_cameras_landmarks.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              initialize_cameras_landmarks: null
+  arrows/core/initialize_cameras_landmarks_keyframe.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              initialize_cameras_landmarks_keyframe: null
+  arrows/core/initialize_object_tracks_threshold.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              initialize_object_tracks_threshold: null
+  arrows/core/interpolate_camera.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              interpolate_camera: null
+  arrows/core/interpolate_track_spline.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              interpolate_track_spline: null
+  arrows/core/keyframe_selector_basic.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              keyframe_selector_basic: null
+  arrows/core/match_features_fundamental_matrix.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              match_features_fundamental_matrix: null
+  arrows/core/match_features_homography.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              match_features_homography: null
+  arrows/core/match_matrix.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              match_matrix: null
+  arrows/core/match_tracks.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              match_tracks: null
+  arrows/core/mesh_operations.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              mesh_operations: null
+  arrows/core/metrics.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              metrics: null
+  arrows/core/necker_reverse.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              necker_reverse: null
+  arrows/core/projected_track_set.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              projected_track_set: null
+  arrows/core/read_object_track_set_kw18.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              read_object_track_set_kw18: null
+  arrows/core/read_track_descriptor_set_csv.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              read_track_descriptor_set_csv: null
+  arrows/core/render_mesh_depth_map.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              render_mesh_depth_map: null
+  arrows/core/sfm_utils.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              sfm_utils: null
+  arrows/core/track_features_augment_keyframes.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              track_features_augment_keyframes: null
+  arrows/core/track_features_core.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              track_features_core: null
+  arrows/core/track_set_impl.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              track_set_impl: null
+  arrows/core/transfer_bbox_with_depth_map.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              transfer_bbox_with_depth_map: null
+  arrows/core/transform.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              transform: null
+  arrows/core/transform_detected_object_set.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              transform_detected_object_set: null
+  arrows/core/triangle_scan_iterator.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              triangle_scan_iterator: null
+  arrows/core/triangulate.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              triangulate: null
+  arrows/core/triangulate_landmarks.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              triangulate_landmarks: null
+  arrows/core/uv_unwrap_mesh.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              uv_unwrap_mesh: null
+  arrows/core/video_input_filter.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              video_input_filter: null
+  arrows/core/video_input_image_list.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              video_input_image_list: null
+  arrows/core/video_input_pos.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              video_input_pos: null
+  arrows/core/video_input_splice.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              video_input_splice: null
+  arrows/core/video_input_split.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              video_input_split: null
+  arrows/core/write_object_track_set_kw18.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              write_object_track_set_kw18: null
+  arrows/core/write_track_descriptor_set_csv.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              write_track_descriptor_set_csv: null
+  sprokit/src/sprokit/pipeline/datum.h:
+    namespaces:
+      sprokit:
+        classes:
+          datum: null

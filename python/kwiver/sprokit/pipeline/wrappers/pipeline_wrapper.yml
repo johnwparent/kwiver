@@ -1,0 +1,101 @@
+files:
+  sprokit/src/sprokit/pipeline/datum.h:
+    namespaces:
+      sprokit:
+        classes:
+          datum: null
+  sprokit/src/sprokit/pipeline/edge.h:
+    namespaces:
+      sprokit:
+        classes:
+          edge: null
+  sprokit/src/sprokit/pipeline/edge_exception.h:
+    namespaces:
+      sprokit:
+        classes:
+          edge_exception: null
+  sprokit/src/sprokit/pipeline/pipeline.h:
+    namespaces:
+      sprokit:
+        classes:
+          pipeline: null
+  sprokit/src/sprokit/pipeline/pipeline_exception.h:
+    namespaces:
+      sprokit:
+        classes:
+          pipeline_exception: null
+  sprokit/src/sprokit/pipeline/process.h:
+    namespaces:
+      sprokit:
+        classes:
+          process: null
+  sprokit/src/sprokit/pipeline/process_cluster.h:
+    namespaces:
+      sprokit:
+        classes:
+          process_cluster: null
+  sprokit/src/sprokit/pipeline/process_cluster_exception.h:
+    namespaces:
+      sprokit:
+        classes:
+          process_cluster_exception: null
+  sprokit/src/sprokit/pipeline/process_exception.h:
+    namespaces:
+      sprokit:
+        classes:
+          process_exception: null
+  sprokit/src/sprokit/pipeline/process_factory.h:
+    namespaces:
+      sprokit:
+        classes:
+          process_factory: null
+  sprokit/src/sprokit/pipeline/process_instrumentation.h:
+    namespaces:
+      sprokit:
+        classes:
+          process_instrumentation: null
+  sprokit/src/sprokit/pipeline/process_registry_exception.h:
+    namespaces:
+      sprokit:
+        classes:
+          process_registry_exception: null
+  sprokit/src/sprokit/pipeline/scheduler.h:
+    namespaces:
+      sprokit:
+        classes:
+          scheduler: null
+  sprokit/src/sprokit/pipeline/scheduler_exception.h:
+    namespaces:
+      sprokit:
+        classes:
+          scheduler_exception: null
+  sprokit/src/sprokit/pipeline/scheduler_factory.h:
+    namespaces:
+      sprokit:
+        classes:
+          scheduler_factory: null
+  sprokit/src/sprokit/pipeline/scheduler_registry_exception.h:
+    namespaces:
+      sprokit:
+        classes:
+          scheduler_registry_exception: null
+  sprokit/src/sprokit/pipeline/stamp.h:
+    namespaces:
+      sprokit:
+        classes:
+          stamp: null
+  sprokit/src/sprokit/pipeline/types.h:
+    namespaces:
+      sprokit:
+        classes:
+          types: null
+  sprokit/src/sprokit/pipeline/utils.h:
+    namespaces:
+      sprokit:
+        classes:
+          utils: null
+  sprokit/src/sprokit/pipeline/version.h:
+    namespaces:
+      sprokit:
+        classes:
+          version: null

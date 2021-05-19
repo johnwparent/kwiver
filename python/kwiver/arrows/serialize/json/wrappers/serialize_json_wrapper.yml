@@ -1,0 +1,139 @@
+files:
+  arrows/serialize/json/activity.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              activity: null
+  arrows/serialize/json/bounding_box.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              bounding_box: null
+  arrows/serialize/json/class_map.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              class_map: null
+  arrows/serialize/json/detected_object.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              detected_object: null
+  arrows/serialize/json/detected_object_set.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              detected_object_set: null
+  arrows/serialize/json/image.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              image: null
+  arrows/serialize/json/load_save.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              load_save: null
+  arrows/serialize/json/load_save_point.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              load_save_point: null
+  arrows/serialize/json/load_save_track_set.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              load_save_track_set: null
+  arrows/serialize/json/load_save_track_state.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              load_save_track_state: null
+  arrows/serialize/json/metadata.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              metadata: null
+  arrows/serialize/json/object_track_set.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              object_track_set: null
+  arrows/serialize/json/object_track_state.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              object_track_state: null
+  arrows/serialize/json/string.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              string: null
+  arrows/serialize/json/timestamp.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              timestamp: null
+  arrows/serialize/json/track.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              track: null
+  arrows/serialize/json/track_item.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              track_item: null
+  arrows/serialize/json/track_set.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              track_set: null
+  arrows/serialize/json/track_state.h:
+    namespaces:
+      kwiver:
+        arrows:
+          core:
+            classes:
+              track_state: null
+  sprokit/src/sprokit/pipeline/datum.h:
+    namespaces:
+      sprokit:
+        classes:
+          datum: null
