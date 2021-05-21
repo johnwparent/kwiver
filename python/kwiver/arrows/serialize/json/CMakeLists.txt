@@ -30,6 +30,13 @@ set( json_python_sources
      serialize_object_track_set.cxx
    )
 
+autopybind11_add_module(json_mod
+                        YAML_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/wrappers/serialize_json_wrapper.yml
+                        DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
+                        LINK_LIBRARIES vital kwiver_serialize_json
+                        GEN_ONLY TRUE)
+
+
 kwiver_add_python_library( json
    arrows/serialize/json
    ${json_python_headers}
