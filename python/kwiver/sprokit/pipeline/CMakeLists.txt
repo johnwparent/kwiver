@@ -8,19 +8,19 @@ target_link_libraries(python-sprokit.pipeline-datum
                       vital_python_util
                       vital vital_util)
 
-autopybind_add_module(pipeline
+autopybind11_add_module(pipeline
                       YAML_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/wrappers/pipeline_wrapper.yml
                       DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
-                      LINK_LIBRARIES sprokit_pipeline sprokit_pipeline_util vital_python_util vital vital_util vital_vpm
+                      LINK_LIBRARIES sprokit_pipeline sprokit_pipeline_util vital_python_util vital vital_util vital_vpm sprokit_python_util
                       GEN_ONLY TRUE
                       )
 get_target_property(pipeline_srcs pipeline_files SOURCES)
 
-kwiver_add_python_library(pipeline
+kwiver_add_python_library(pipeline_mod
   sprokit/pipeline
   ${pipeline_srcs}
 )
-target_link_libraries(python-sprokit.pipeline-pipeline
+target_link_libraries(python-sprokit.pipeline-pipeline_mod
   PRIVATE
     sprokit_pipeline
     sprokit_pipeline_util
@@ -28,6 +28,7 @@ target_link_libraries(python-sprokit.pipeline-pipeline
     vital_python_util
     ${Boost_IOSTREAMS_LIBRARY}
     ${Boost_SYSTEM_LIBRARY}
+    ${Boost_CHRONO_LIBRARY}
     vital_vpm
   )
 

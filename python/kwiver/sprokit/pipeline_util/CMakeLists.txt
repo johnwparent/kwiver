@@ -3,10 +3,10 @@ project(sprokit_python_sprokit_pipeline_util)
 if( NOT WIN32 )
 
 
-autopybind_add_module(pipeline_util
+autopybind11_add_module(pipeline_util
                       YAML_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/wrappers/pipeline_utils_wrapper.yml
                       DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
-                      LINK_LIBRARIES sprokit_pipeline sprokit_pipeline_util vital vital_util sprokit_python_util vital_vpm
+                      LINK_LIBRARIES sprokit_pipeline sprokit_pipeline_util vital vital_util sprokit_python_util vital_vpm vital_python_util
                       GEN_ONLY TRUE)
 get_target_property(pipeline_util_srcs pipeline_util_files SOURCES)
 

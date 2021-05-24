@@ -1,9 +1,4 @@
 files:
-  sprokit/src/sprokit/pipeline/datum.h:
-    namespaces:
-      sprokit:
-        classes:
-          datum: nullfiles:
   sprokit/src/sprokit/pipeline/bakery_base.h:
     namespaces:
       sprokit:
