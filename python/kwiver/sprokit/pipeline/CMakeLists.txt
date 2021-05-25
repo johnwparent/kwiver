@@ -13,6 +13,7 @@ autopybind11_add_module(pipeline
                       DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
                       LINK_LIBRARIES sprokit_pipeline sprokit_pipeline_util vital_python_util vital vital_util vital_vpm sprokit_python_util
                       GEN_ONLY TRUE
+                      INCLUDE_DIRS ${BOOST_ROOT_ARG}/include
                       )
 get_target_property(pipeline_srcs pipeline_files SOURCES)
 

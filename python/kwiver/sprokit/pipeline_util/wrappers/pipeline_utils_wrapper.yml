@@ -1,115 +1,110 @@
 files:
-  sprokit/src/sprokit/pipeline/bakery_base.h:
+  sprokit/pipeline_util/bakery_base.h:
     namespaces:
       sprokit:
         classes:
           bakery_base: null
-  sprokit/src/sprokit/pipeline/bakery_display.h:
+  sprokit/pipeline_util/bakery_display.h:
     namespaces:
       sprokit:
         classes:
           bakery_display: null
-  sprokit/src/sprokit/pipeline/cluster_bakery.h:
+  sprokit/pipeline_util/cluster_bakery.h:
     namespaces:
       sprokit:
         classes:
           cluster_bakery: null
-  sprokit/src/sprokit/pipeline/cluster_creator.h:
+  sprokit/pipeline_util/cluster_creator.h:
     namespaces:
       sprokit:
         classes:
           cluster_creator: null
-  sprokit/src/sprokit/pipeline/cluster_info.h:
+  sprokit/pipeline_util/cluster_info.h:
     namespaces:
       sprokit:
         classes:
           cluster_info: null
-  sprokit/src/sprokit/pipeline/cluster_splitter.h:
+  sprokit/pipeline_util/cluster_splitter.h:
     namespaces:
       sprokit:
         classes:
           cluster_splitter: null
-  sprokit/src/sprokit/pipeline/datum.h:
-    namespaces:
-      sprokit:
-        classes:
-          datum: null
-  sprokit/src/sprokit/pipeline/export_dot.h:
+  sprokit/pipeline_util/export_dot.h:
     namespaces:
       sprokit:
         classes:
           export_dot: null
-  sprokit/src/sprokit/pipeline/export_dot_exception.h:
-    namespaces:
-      sprokit:
-        classes:
-          export_dot_exception: null
-  sprokit/src/sprokit/pipeline/export_pipe.h:
+  # sprokit/pipeline_util/export_dot_exception.h:
+  #   namespaces:
+  #     sprokit:
+  #       classes:
+  #         export_dot_exception: null
+  sprokit/pipeline_util/export_pipe.h:
     namespaces:
       sprokit:
         classes:
           export_pipe: null
-  sprokit/src/sprokit/pipeline/lex_processor.h:
-    namespaces:
-      sprokit:
-        classes:
-          lex_processor: null
-  sprokit/src/sprokit/pipeline/literal_pipeline.h:
+  # sprokit/pipeline_util/lex_processor.h:
+  #   namespaces:
+  #     sprokit:
+  #       classes:
+  #         lex_processor: null
+  sprokit/pipeline_util/literal_pipeline.h:
     namespaces:
       sprokit:
         classes:
           literal_pipeline: null
-  sprokit/src/sprokit/pipeline/load_pipe_exception.h:
-    namespaces:
-      sprokit:
-        classes:
-          load_pipe_exception: null
-  sprokit/src/sprokit/pipeline/loaded_cluster.h:
+  # sprokit/pipeline_util/load_pipe_exception.h:
+  #   namespaces:
+  #     sprokit:
+  #       classes:
+  #         load_pipe_exception: null
+  sprokit/pipeline_util/loaded_cluster.h:
     namespaces:
       sprokit:
         classes:
           loaded_cluster: null
-  sprokit/src/sprokit/pipeline/path.h:
+  sprokit/pipeline_util/path.h:
     namespaces:
       sprokit:
         classes:
           path: null
-  sprokit/src/sprokit/pipeline/pipe_bakery.h:
+  sprokit/pipeline_util/pipe_bakery.h:
     namespaces:
       sprokit:
         classes:
           pipe_bakery: null
-  sprokit/src/sprokit/pipeline/pipe_bakery_exception.h:
-    namespaces:
-      sprokit:
-        classes:
-          pipe_bakery_exception: null
-  sprokit/src/sprokit/pipeline/pipe_declaration_types.h:
+  # sprokit/pipeline_util/pipe_bakery_exception.h:
+  #   namespaces:
+  #     sprokit:
+  #       classes:
+  #         pipe_bakery_exception: null
+  sprokit/pipeline_util/pipe_declaration_types.h:
     namespaces:
       sprokit:
         classes:
           pipe_declaration_types: null
-  sprokit/src/sprokit/pipeline/pipe_display.h:
+  sprokit/pipeline_util/pipe_display.h:
     namespaces:
       sprokit:
         classes:
           pipe_display: null
-  sprokit/src/sprokit/pipeline/pipe_parser.h:
+  sprokit/pipeline_util/pipe_parser.h:
     namespaces:
       sprokit:
         classes:
           pipe_parser: null
-  sprokit/src/sprokit/pipeline/pipeline_builder.h:
+  sprokit/pipeline_util/pipeline_builder.h:
     namespaces:
       sprokit:
         classes:
           pipeline_builder: null
-  sprokit/src/sprokit/pipeline/provided_by_cluster.h:
+  sprokit/pipeline_util/provided_by_cluster.h:
     namespaces:
       sprokit:
         classes:
           provided_by_cluster: null
-  sprokit/src/sprokit/pipeline/token.h:
+  sprokit/pipeline_util/token.h:
     namespaces:
       sprokit:
         classes:
