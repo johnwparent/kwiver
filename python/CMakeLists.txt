@@ -4,7 +4,7 @@ include("${KWIVER_CMAKE_DIR}/kwiver-setup-python.cmake")
 FetchContent_Declare(
     autopybind11
     GIT_REPOSITORY https://gitlab.kitware.com/autopybind11/autopybind11.git
-    GIT_TAG 935f5d8a2db3eeb635dd02ddfc92d9c4597d76e1 )
+    GIT_TAG  3d9e30908ead769846f352da4ca6a900e9d2c056 )
 # 0e1b99030feaf3dee116143e37f77fea3cc83b1a
 # Get autopybind all set here to be used in lower modules
 FetchContent_MakeAvailable(autopybind11)
