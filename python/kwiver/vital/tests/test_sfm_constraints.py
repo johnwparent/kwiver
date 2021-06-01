@@ -114,4 +114,4 @@ class TestSFMConstraints(unittest.TestCase):
       nt.assert_equal(a, 1080)
       nt.assert_equal(b, 720)
       found_focal = s.get_focal_length_prior(0)
-      nt.assert_false(found_focal)
+      nt.ok_(found_focal is None)
